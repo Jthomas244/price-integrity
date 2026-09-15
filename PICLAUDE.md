@@ -213,6 +213,14 @@ correction) is now backed by code and tests.
 
 ## Conventions
 
+- **Git identity:** commits must be authored as `talon244@gmail.com` (now
+  set in `git config --global`). Vercel blocks any deployment whose commit
+  author isn't on the account — the 2026-09-15 GhostCart deploys stalled
+  as "blocked" because commits carried `julian@Mac.fios-router.home`.
+  Commits before `c4c68c7` (GhostCart) / this one (here) still have the
+  bad author; harmless unless rewritten, which Julian can do with
+  `git filter-branch --env-filter` + force-push if he wants a clean log.
+
 - Run tests from `backend/`: `.venv/bin/pytest -q`. Keep them green;
   add tests for every rule direction and every statistical claim
   (mirror how GhostCart's `personaPricing.test.ts` proves the decoy has
