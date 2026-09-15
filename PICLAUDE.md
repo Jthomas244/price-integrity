@@ -103,6 +103,13 @@ httpx, numpy, scipy; dev: pytest. No pandas, no statsmodels.
   `POST /audit` (`engine: threshold|regression`), `/audit/html`,
   `POST /audit/ghostcart[/html]` (503 without the secret).
 - `scripts/audit_ghostcart.py` — CLI: live probe → `reports/ghostcart-latest.{json,html}`.
+- `scripts/export_summary.py` — condenses a report to one row per term;
+  its output is committed in the GhostCart repo as `src/lib/audit-result.json`
+  and rendered by GhostCart's `/audit` page. **Re-run + copy after any
+  audit that changes the numbers.**
+- Report payload additions 2026-09-15: `variant_ci` (95% CI per level) on
+  every finding; `control_price` (median observed price at the reference
+  cell, else exp(intercept)) in diagnostics. The frontend's charts depend on both.
 - `settings.py` — loads `.env` from project root; `ghostcart_secret()`.
 - `tests/test_rigorous.py` (43) — GhostCart rule recovery (exact
   transcription of the contract's rule function), decoy clean in every
@@ -125,7 +132,12 @@ report via `distinctTerms`), `/report` (`ReportClient` shows the committed
 report and can POST `/audit/ghostcart` on the backend for a live re-run —
 verified working in the browser, 12 s), `/methodology` (react-markdown of
 the doc). Findings are grouped per term (`TermGroup`) with a per-product
-table. Env: `NEXT_PUBLIC_API_URL` (default localhost:8000),
+table. "At a glance" on `/report`: `EffectLadder` (SVG forest plot of every
+level, hue = category, severity bands, hover tooltip; palette validated
+with the dataviz skill: individual #B42318, market #12907A, clean grey)
+and `ShopperMatrix` (device × cart price grid reconstructed from the
+report's estimates + control price, with product / referrer-decoy /
+stock-level controls; reproduces GhostCart's real prices to the cent). Env: `NEXT_PUBLIC_API_URL` (default localhost:8000),
 `NEXT_PUBLIC_GHOSTCART_URL`, `NEXT_PUBLIC_REPO_URL` (`frontend/.env.example`).
 Backend needs `CORS_ORIGINS` set to the frontend origin. Dev servers:
 `AI Port 1/.claude/launch.json` (`pi-frontend`; `pi-backend` config exists
@@ -177,10 +189,14 @@ correction) is now backed by code and tests.
       interaction, inventory lawful (+10.3% at stock 1 / −9.5% at 100),
       referrer and both referrer interactions clean. CIs ±0.18pp,
       q = 0. Re-run: `backend/.venv/bin/python scripts/audit_ghostcart.py`.
-- [x] **Phase 4 — Frontend (PriceIntegrity side).** Built and committed
-      2026-09-15. Still to do on the **GhostCart side**: point
-      `NEXT_PUBLIC_PRICEINTEGRITY_URL` at the deployed frontend and make
-      `/audit` show/link the real report instead of its derived preview.
+- [x] **Phase 4 — Frontend.** Built 2026-09-15, incl. the two
+      visualizations. **GhostCart side done too** (commit `aa5fb89` in
+      `~/Downloads/ghostcart`, not yet pushed/deployed): `/audit` renders
+      the real result from `src/lib/audit-result.json`; links to
+      `$NEXT_PUBLIC_PRICEINTEGRITY_URL/report` once that env var is set.
+      **Portfolio card added** (commit `2a42096` in `AI Port 2/portfolio`,
+      not pushed): status "In Progress", repo link only — add `url` and a
+      `/projects/priceintegrity.jpg` screenshot after deploy.
 - [x] **Phase 5 — Packaging.** LICENSE, `docs/methodology.md`, `git init`.
 - [ ] **Phase 6 — Publish.** Create github.com/Jthomas244/price-integrity
       (the README/frontend already link there), push; deploy frontend to
