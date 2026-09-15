@@ -1,0 +1,2104 @@
+{
+  "generated_at": "2026-09-15T20:41:10+00:00",
+  "store": "GhostCart (https://ghostcart-ten.vercel.app)",
+  "probe": {
+    "sessions_per_variant": null,
+    "observation_count": 1920,
+    "target": "GhostCart",
+    "design": "full",
+    "products_probed": [
+      "GC-0001",
+      "GC-0002",
+      "GC-0003",
+      "GC-0004",
+      "GC-0005",
+      "GC-0006",
+      "GC-0007",
+      "GC-0008",
+      "GC-0009",
+      "GC-0010"
+    ],
+    "signals_probed": [
+      "cart_abandonment",
+      "device_type",
+      "inventory_level",
+      "referrer_source"
+    ],
+    "signal_space": {
+      "device_type": [
+        "desktop",
+        "mobile",
+        "tablet"
+      ],
+      "cart_abandonment": [
+        false,
+        true
+      ],
+      "referrer_source": [
+        "direct",
+        "search",
+        "social",
+        "email"
+      ],
+      "inventory_level": [
+        1,
+        10,
+        25,
+        40,
+        50,
+        60,
+        80,
+        100
+      ]
+    },
+    "reference_levels": {
+      "device_type": "desktop",
+      "cart_abandonment": false,
+      "referrer_source": "direct",
+      "inventory_level": 50
+    },
+    "cells_per_product": 192,
+    "replicates": 1,
+    "sessions_per_product": 192,
+    "session_count": 1920,
+    "failure_count": 0,
+    "started_at": "2026-09-15T20:40:56+00:00",
+    "finished_at": "2026-09-15T20:41:10+00:00"
+  },
+  "summary": {
+    "headline": "Personalized pricing detected on 2 individual-based signals across 10 products \u2014 30 findings (20 moderate, 10 low). Worst case: shoppers with device type = mobile pay 10.0% more for GC-0001. 10 of these are compounding effects between two individual-based signals.",
+    "highest_severity": "moderate",
+    "flagged_finding_count": 30,
+    "flagged_by_severity": {
+      "high": 0,
+      "moderate": 20,
+      "low": 10
+    },
+    "flagged_signals": [
+      "cart_abandonment",
+      "device_type"
+    ],
+    "clean_individual_signals": [
+      "referrer_source"
+    ],
+    "lawful_dynamic_finding_count": 10,
+    "interaction_finding_count": 10,
+    "signals_tested": [
+      "cart_abandonment",
+      "device_type",
+      "inventory_level",
+      "referrer_source"
+    ],
+    "products_tested": [
+      "GC-0001",
+      "GC-0002",
+      "GC-0003",
+      "GC-0004",
+      "GC-0005",
+      "GC-0006",
+      "GC-0007",
+      "GC-0008",
+      "GC-0009",
+      "GC-0010"
+    ]
+  },
+  "findings": [
+    {
+      "product_id": "GC-0001",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.81,
+      "ci_high_pct": 10.19,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 10.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 10.0,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.82,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0002",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 9.99,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Shoppers with device type = mobile see prices 10.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Device type is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "device type = mobile": 9.99,
+        "device type = tablet": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "device_type"
+      ],
+      "term": "device type",
+      "ci_low_pct": 9.8,
+      "ci_high_pct": 10.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0002",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.01,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.01,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.18,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0001",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.17,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 8.0,
+      "severity": "moderate",
+      "sample_size": 192,
+      "detail": "Sessions with cart abandonment = True \u00d7 device type = mobile pay an additional 8.0% higher beyond the sum of each signal's own effect (FDR-corrected p = 0.0000). A compounding effect between two individual-level signals is a stronger surveillance-pricing indicator than either alone.",
+      "driving_variant": "cart abandonment = True \u00d7 device type = mobile",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 device type = mobile": 8.0,
+        "cart abandonment = True \u00d7 device type = tablet": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "device_type"
+      ],
+      "term": "cart abandonment \u00d7 device type",
+      "ci_low_pct": 7.84,
+      "ci_high_pct": 8.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True \u00d7 device type = mobile"
+      ]
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.01,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.01
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.85,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0001",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0002",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.83,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 6.0,
+      "severity": "low",
+      "sample_size": 192,
+      "detail": "Shoppers with cart abandonment = True see prices 6.0% higher than the control session, holding every other signal constant (FDR-corrected p = 0.0000). Cart abandonment is an individual-level signal; this pattern is what regulators classify as personalized/surveillance pricing and increasingly require disclosure for.",
+      "driving_variant": "cart abandonment = True",
+      "direction": "markup",
+      "variant_breakdown": {
+        "cart abandonment = True": 6.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "cart_abandonment"
+      ],
+      "term": "cart abandonment",
+      "ci_low_pct": 5.84,
+      "ci_high_pct": 6.16,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "cart abandonment = True"
+      ]
+    }
+  ],
+  "lawful_dynamic": [
+    {
+      "product_id": "GC-0002",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.3,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.3,
+        "inventory level = 100": -9.52
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.24,
+      "ci_high_pct": 10.35,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.29,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.29,
+        "inventory level = 100": -9.51
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.34,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0001",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.28,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.28,
+        "inventory level = 100": -9.5
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.23,
+      "ci_high_pct": 10.33,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "inventory_level",
+      "signal_label": "inventory level",
+      "category": "market_based",
+      "variance_pct": 10.27,
+      "severity": "lawful",
+      "sample_size": 192,
+      "detail": "Price is 10.3% higher at inventory level = 1 than at the control level (FDR-corrected p = 0.0000) \u2014 consistent with lawful dynamic pricing based on market conditions.",
+      "driving_variant": "inventory level = 1",
+      "direction": "markup",
+      "variant_breakdown": {
+        "inventory level = 1": 10.27,
+        "inventory level = 100": -9.49
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "inventory_level"
+      ],
+      "term": "inventory level",
+      "ci_low_pct": 10.22,
+      "ci_high_pct": 10.32,
+      "p_value_corrected": 0.0,
+      "significant_variants": [
+        "inventory level = 1",
+        "inventory level = 100"
+      ]
+    }
+  ],
+  "clean": [
+    {
+      "product_id": "GC-0001",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0001",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0001",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0002",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.18,
+      "ci_high_pct": 0.18,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0002",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.22,
+      "ci_high_pct": 0.22,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0002",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.18,
+      "ci_high_pct": 0.18,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0003",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0004",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.18,
+      "ci_high_pct": 0.18,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0005",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.18,
+      "ci_high_pct": 0.18,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0006",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0007",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0008",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0009",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "cart_abandonment",
+      "signal_label": "cart abandonment",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between cart abandonment \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "cart abandonment = True \u00d7 referrer source = email": 0.0,
+        "cart abandonment = True \u00d7 referrer source = search": 0.0,
+        "cart abandonment = True \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "cart_abandonment",
+        "referrer_source"
+      ],
+      "term": "cart abandonment \u00d7 referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "device_type",
+      "signal_label": "device type",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No compounding effect between device type \u00d7 referrer source: the two signals together do not move the price beyond what each does alone.",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "device type = mobile \u00d7 referrer source = email": 0.0,
+        "device type = mobile \u00d7 referrer source = search": 0.0,
+        "device type = mobile \u00d7 referrer source = social": 0.0,
+        "device type = tablet \u00d7 referrer source = email": 0.0,
+        "device type = tablet \u00d7 referrer source = search": 0.0,
+        "device type = tablet \u00d7 referrer source = social": 0.0
+      },
+      "effect_type": "interaction",
+      "signals": [
+        "device_type",
+        "referrer_source"
+      ],
+      "term": "device type \u00d7 referrer source",
+      "ci_low_pct": -0.21,
+      "ci_high_pct": 0.21,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    },
+    {
+      "product_id": "GC-0010",
+      "signal_type": "referrer_source",
+      "signal_label": "referrer source",
+      "category": "individual_based",
+      "variance_pct": 0.0,
+      "severity": "none",
+      "sample_size": 192,
+      "detail": "No statistically significant price effect from referrer source after controlling for every other signal (FDR-corrected).",
+      "driving_variant": null,
+      "direction": null,
+      "variant_breakdown": {
+        "referrer source = email": 0.0,
+        "referrer source = search": 0.0,
+        "referrer source = social": 0.0
+      },
+      "effect_type": "main_effect",
+      "signals": [
+        "referrer_source"
+      ],
+      "term": "referrer source",
+      "ci_low_pct": -0.17,
+      "ci_high_pct": 0.17,
+      "p_value_corrected": 1.0,
+      "significant_variants": []
+    }
+  ],
+  "diagnostics": [
+    {
+      "product_id": "GC-0001",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0002",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0003",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0004",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0005",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0006",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0007",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0008",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0009",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    },
+    {
+      "product_id": "GC-0010",
+      "n_observations": 192,
+      "n_parameters": 19,
+      "fitted": true,
+      "reason": null
+    }
+  ],
+  "methodology_note": "Every pricing signal is placed in one of two buckets. Market-based signals (inventory, time of day, day of week, seasonal demand) describe conditions that apply equally to every shopper; variance driven by them is conventional dynamic pricing and is surfaced for visibility only. Individual-based signals (device, operating system, location, ISP, browsing and cart history, referrer, login state, account tenure) describe the shopper rather than the market; variance driven by them is personalized or 'surveillance' pricing, which regulators increasingly require merchants to disclose. The audit runs a randomized factorial experiment: every synthetic session is assigned a value for every signal at random, so each signal's effect can be estimated while holding all the others constant. For each product, log(price) is fit by robust (Huber) regression on all signals at once plus every pairwise interaction between individual-based signals. Each effect is reported as a percentage with a 95% confidence interval and a p-value corrected for multiple comparisons (Benjamini-Hochberg, false discovery rate 5%). A signal is flagged only if its effect is statistically significant after correction and at least 3% in size; smaller or non-significant effects are reported as clean."
+}

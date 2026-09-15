@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background-color: #F6F7F9; color: #15171F; }
+::selection { background-color: #0E7C66; color: white; }
+.focus-ring:focus-visible { outline: 2px solid #0E7C66; outline-offset: 2px; }
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* Methodology page prose (no typography plugin) */
+.prose-pi h1 { @apply text-3xl sm:text-4xl font-bold tracking-tight mb-6; }
+.prose-pi h2 { @apply text-xl sm:text-2xl font-bold tracking-tight mt-12 mb-4 pb-2 border-b border-line; }
+.prose-pi h3 { @apply text-lg font-semibold mt-8 mb-3; }
+.prose-pi p { @apply leading-relaxed mb-4 text-ink/90; }
+.prose-pi ul, .prose-pi ol { @apply pl-6 mb-4 space-y-2; }
+.prose-pi ul { @apply list-disc; }
+.prose-pi ol { @apply list-decimal; }
+.prose-pi li { @apply leading-relaxed; }
+.prose-pi code { @apply font-mono text-[0.9em] bg-ink/5 rounded px-1 py-0.5; }
+.prose-pi pre { @apply font-mono text-sm bg-ink text-white rounded-md p-4 overflow-x-auto mb-4; }
+.prose-pi pre code { @apply bg-transparent p-0 text-white; }
+.prose-pi table { @apply w-full text-sm border-collapse mb-6; }
+.prose-pi th { @apply text-left font-semibold text-muted border-b border-line py-2 pr-4 align-bottom; }
+.prose-pi td { @apply border-b border-line py-2 pr-4 align-top; }
+.prose-pi a { @apply text-accent underline underline-offset-2; }
+.prose-pi strong { @apply font-semibold; }
+.prose-pi .table-wrap { @apply overflow-x-auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
