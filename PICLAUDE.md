@@ -209,13 +209,15 @@ correction) is now backed by code and tests.
       [x] Portfolio card marked Live with the URL (committed in
       `AI Port 2/portfolio`, needs `git push`; no screenshot yet —
       `public/projects/priceintegrity.jpg` would follow the GhostCart card).
-      Remaining, all Julian's: (1) Render blueprint for the backend
-      (`GHOSTCART_PROBE_SECRET`; `CORS_ORIGINS` already
-      `https://price-integrity.vercel.app`), then set `NEXT_PUBLIC_API_URL`
-      on the Vercel project and redeploy to enable live re-runs;
-      (2) GhostCart `NEXT_PUBLIC_PRICEINTEGRITY_URL=https://price-integrity.vercel.app`
-      + `vercel --prod` (command handed over 2026-09-15 — two earlier
-      attempts stored literal placeholders and had to be removed).
+      [x] **Backend live at https://price-integrity-api.onrender.com**
+      (Render free tier: sleeps after 15 min idle, ~30–50 s cold start).
+      `NEXT_PUBLIC_API_URL` set on Vercel for prod/preview/dev; live
+      re-run verified from the deployed site 2026-09-15 (24 s).
+      `frontend/` is `vercel link`ed to project `price-integrity`
+      (`.vercel/` gitignored). Remaining, Julian's: GhostCart
+      `NEXT_PUBLIC_PRICEINTEGRITY_URL=https://price-integrity.vercel.app`
+      + `vercel --prod` there; `git push` in `AI Port 2/portfolio`;
+      optional card screenshot.
       (`AI Port 2/portfolio/src/data/projects.ts`, same pattern as the
       VaultAP and GhostCart cards).
 
