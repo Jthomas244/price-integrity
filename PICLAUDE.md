@@ -201,13 +201,21 @@ correction) is now backed by code and tests.
 - [ ] **Phase 6 — Publish.** [x] github.com/Jthomas244/price-integrity
       created and pushed 2026-09-15. [x] `backend/Dockerfile` +
       `render.yaml` added (Docker daemon wasn't running, so the image is
-      untested locally — first Render build will tell). Remaining, all
-      Julian's (deploys are blocked for Claude Code): deploy backend
-      (Render blueprint; set `GHOSTCART_PROBE_SECRET`, fix `CORS_ORIGINS`
-      to the real frontend origin), deploy frontend (Vercel, root
-      `frontend`, `NEXT_PUBLIC_API_URL`), push GhostCart + set
-      `NEXT_PUBLIC_PRICEINTEGRITY_URL`, then finish the card on
-      julianthomas.dev
+      untested locally — first Render build will tell).
+      [x] **Frontend live at https://price-integrity.vercel.app** (built
+      without `NEXT_PUBLIC_API_URL`, so `/report` shows the committed
+      audit and the live re-run button is disabled with an explanation).
+      [x] GhostCart `/audit` live with the real result (pushed + deployed).
+      [x] Portfolio card marked Live with the URL (committed in
+      `AI Port 2/portfolio`, needs `git push`; no screenshot yet —
+      `public/projects/priceintegrity.jpg` would follow the GhostCart card).
+      Remaining, all Julian's: (1) Render blueprint for the backend
+      (`GHOSTCART_PROBE_SECRET`; `CORS_ORIGINS` already
+      `https://price-integrity.vercel.app`), then set `NEXT_PUBLIC_API_URL`
+      on the Vercel project and redeploy to enable live re-runs;
+      (2) GhostCart `NEXT_PUBLIC_PRICEINTEGRITY_URL=https://price-integrity.vercel.app`
+      + `vercel --prod` (command handed over 2026-09-15 — two earlier
+      attempts stored literal placeholders and had to be removed).
       (`AI Port 2/portfolio/src/data/projects.ts`, same pattern as the
       VaultAP and GhostCart cards).
 
