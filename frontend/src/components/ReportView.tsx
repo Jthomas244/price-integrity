@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import TermGroup from "./TermGroup";
 import Stat from "./Stat";
+import EffectLadder from "./EffectLadder";
+import ShopperMatrix from "./ShopperMatrix";
 import { durationSeconds, label, SEVERITY_TEXT, type Finding, type Report } from "@/lib/report";
 
 function groupByTerm(findings: Finding[]): Finding[][] {
@@ -48,6 +50,11 @@ export default function ReportView({ report }: { report: Report }) {
           {report.probe.failure_count ? ` · ${report.probe.failure_count} failed requests` : ""}
         </p>
       </section>
+
+      <Section title="At a glance" blurb="Two views of the same estimates: every hypothesis on one axis, and the prices those estimates imply.">
+        <EffectLadder report={report} />
+        <ShopperMatrix report={report} />
+      </Section>
 
       <Section title="Personalized pricing findings" count={mains.length} blurb="Individual-based signals that moved the price, holding every other signal constant.">
         {mains.length ? mains.map((g) => <TermGroup key={g[0].term} findings={g} />) : <Empty>None. No individual-based signal moved the price beyond the detection threshold.</Empty>}

@@ -293,6 +293,10 @@ class RegressionDiagnostics:
     n_parameters: int
     fitted: bool
     reason: Optional[str] = None
+    # Price of the reference (control) session: the median observed price of
+    # sessions at every reference level when the design contains such
+    # sessions (a full factorial always does), else exp(intercept).
+    control_price: Optional[float] = None
 
 
 class RigorousAuditEngine:
@@ -346,7 +350,9 @@ class RigorousAuditEngine:
 
         y = np.log(np.asarray([o.price for o in obs], dtype=float))
         beta, se, dof = fit_huber_regression(design.X, y)
-        self.diagnostics.append(RegressionDiagnostics(product_id, n, p, fitted=True))
+        self.diagnostics.append(RegressionDiagnostics(
+            product_id, n, p, fitted=True, control_price=self._control_price(obs, beta[0]),
+        ))
 
         results: List[_TermResult] = []
         for i, term in enumerate(design.terms, start=1):  # column 0 is the intercept
@@ -357,6 +363,16 @@ class RigorousAuditEngine:
             p_value = float(2 * stats.t.sf(abs(t_stat), dof))
             results.append(_TermResult(product_id, term, coef, coef_se, p_value, n))
         return results, design
+
+    def _control_price(self, obs: List[SessionObservation], intercept: float) -> float:
+        ref = self.reference_levels
+        at_ref = [
+            o.price for o in obs
+            if all(_level_key(o.signals.get(s)) == _level_key(v) for s, v in ref.items() if s in o.signals)
+        ] if ref else []
+        if at_ref:
+            return round(float(np.median(at_ref)), 2)
+        return round(float(np.exp(intercept)), 2)
 
     def run_audit(self, include_clean: bool = False) -> List[AuditFinding]:
         """Fit one robust regression per product, FDR-correct every
@@ -470,6 +486,7 @@ class RigorousAuditEngine:
             ci_high_pct=round(primary[3] * 100, 2),
             p_value_corrected=round(primary[4], 4),
             significant_variants=[v[0] for v in significant],
+            variant_ci={label: (round(lo * 100, 2) + 0.0, round(hi * 100, 2) + 0.0) for label, _, lo, hi, *_ in variants},
         )
 
     @staticmethod

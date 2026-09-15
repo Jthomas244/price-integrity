@@ -23,6 +23,7 @@ export interface Finding {
   ci_high_pct: number | null;
   p_value_corrected: number | null;
   significant_variants: string[];
+  variant_ci: Record<string, [number, number]>;
 }
 
 export interface Report {
@@ -58,7 +59,7 @@ export interface Report {
   findings: Finding[];
   lawful_dynamic: Finding[];
   clean: Finding[];
-  diagnostics: { product_id: string; n_observations: number; n_parameters: number; fitted: boolean; reason: string | null }[];
+  diagnostics: { product_id: string; n_observations: number; n_parameters: number; fitted: boolean; reason: string | null; control_price: number | null }[];
   methodology_note: string;
 }
 
@@ -101,4 +102,25 @@ export function durationSeconds(r: Report): number | null {
   const { started_at, finished_at } = r.probe;
   if (!started_at || !finished_at) return null;
   return Math.max(0, (Date.parse(finished_at) - Date.parse(started_at)) / 1000);
+}
+
+export const CATEGORY_COLOR: Record<Category | "clean", string> = {
+  individual_based: "#B42318",
+  market_based: "#12907A",
+  clean: "#9AA0A6",
+};
+
+export function allFindings(r: Report): Finding[] {
+  return [...r.findings, ...r.lawful_dynamic, ...r.clean];
+}
+
+/** "device type = mobile" -> "mobile"; "a = x × b = y" -> "x × y". */
+export function shortLevel(level: string): string {
+  return level.split(" × ").map((part) => part.replace(/^.*?= /, "")).join(" × ");
+}
+
+export function median(xs: number[]): number {
+  const a = [...xs].sort((x, y) => x - y);
+  const m = a.length >> 1;
+  return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2;
 }

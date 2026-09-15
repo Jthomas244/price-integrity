@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T20:41:10+00:00",
+  "generated_at": "2026-09-15T21:03:38+00:00",
   "store": "GhostCart (https://ghostcart-ten.vercel.app)",
   "probe": {
     "sessions_per_variant": null,
@@ -62,8 +62,8 @@
     "sessions_per_product": 192,
     "session_count": 1920,
     "failure_count": 0,
-    "started_at": "2026-09-15T20:40:56+00:00",
-    "finished_at": "2026-09-15T20:41:10+00:00"
+    "started_at": "2026-09-15T21:03:26+00:00",
+    "finished_at": "2026-09-15T21:03:38+00:00"
   },
   "summary": {
     "headline": "Personalized pricing detected on 2 individual-based signals across 10 products \u2014 30 findings (20 moderate, 10 low). Worst case: shoppers with device type = mobile pay 10.0% more for GC-0001. 10 of these are compounding effects between two individual-based signals.",
@@ -128,7 +128,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -155,7 +165,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -182,7 +202,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -209,7 +239,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.81,
+          10.19
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -236,7 +276,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -263,7 +313,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -290,7 +350,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -317,7 +387,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.16,
+          0.16
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -344,7 +424,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.82,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0002",
@@ -371,7 +461,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "device type = mobile": [
+          9.8,
+          10.18
+        ],
+        "device type = tablet": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0002",
@@ -399,7 +499,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.18
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0001",
@@ -427,7 +537,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -455,7 +575,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -483,7 +613,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -511,7 +651,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.17
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -539,7 +689,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -567,7 +727,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -595,7 +765,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -623,7 +803,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -651,7 +841,17 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True \u00d7 device type = mobile"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 device type = mobile": [
+          7.84,
+          8.16
+        ],
+        "cart abandonment = True \u00d7 device type = tablet": [
+          -0.15,
+          0.15
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -677,7 +877,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.85,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0001",
@@ -703,7 +909,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0002",
@@ -729,7 +941,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.83,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -755,7 +973,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -781,7 +1005,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -807,7 +1037,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -833,7 +1069,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -859,7 +1101,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -885,7 +1133,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -911,7 +1165,13 @@
       "p_value_corrected": 0.0,
       "significant_variants": [
         "cart abandonment = True"
-      ]
+      ],
+      "variant_ci": {
+        "cart abandonment = True": [
+          5.84,
+          6.16
+        ]
+      }
     }
   ],
   "lawful_dynamic": [
@@ -941,7 +1201,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.24,
+          10.35
+        ],
+        "inventory level = 100": [
+          -9.56,
+          -9.47
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -969,7 +1239,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.34
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0001",
@@ -997,7 +1277,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -1025,7 +1315,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -1053,7 +1353,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -1081,7 +1391,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -1109,7 +1429,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -1137,7 +1467,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -1165,7 +1505,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.23,
+          10.33
+        ],
+        "inventory level = 100": [
+          -9.55,
+          -9.46
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -1193,7 +1543,17 @@
       "significant_variants": [
         "inventory level = 1",
         "inventory level = 100"
-      ]
+      ],
+      "variant_ci": {
+        "inventory level = 1": [
+          10.22,
+          10.32
+        ],
+        "inventory level = 100": [
+          -9.54,
+          -9.45
+        ]
+      }
     }
   ],
   "clean": [
@@ -1222,7 +1582,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0001",
@@ -1252,7 +1626,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0001",
@@ -1278,7 +1678,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0002",
@@ -1305,7 +1719,21 @@
       "ci_low_pct": -0.18,
       "ci_high_pct": 0.18,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.18,
+          0.18
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.18,
+          0.18
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.18,
+          0.18
+        ]
+      }
     },
     {
       "product_id": "GC-0002",
@@ -1335,7 +1763,33 @@
       "ci_low_pct": -0.22,
       "ci_high_pct": 0.22,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.22,
+          0.22
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.22,
+          0.22
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.22,
+          0.22
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.22,
+          0.22
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.22,
+          0.22
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.22,
+          0.22
+        ]
+      }
     },
     {
       "product_id": "GC-0002",
@@ -1361,7 +1815,21 @@
       "ci_low_pct": -0.18,
       "ci_high_pct": 0.18,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.18,
+          0.18
+        ],
+        "referrer source = search": [
+          -0.18,
+          0.18
+        ],
+        "referrer source = social": [
+          -0.18,
+          0.18
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -1388,7 +1856,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -1418,7 +1900,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0003",
@@ -1444,7 +1952,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -1471,7 +1993,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -1501,7 +2037,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0004",
@@ -1527,7 +2089,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -1554,7 +2130,21 @@
       "ci_low_pct": -0.18,
       "ci_high_pct": 0.18,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.18,
+          0.18
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.18,
+          0.18
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.18,
+          0.18
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -1584,7 +2174,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0005",
@@ -1610,7 +2226,21 @@
       "ci_low_pct": -0.18,
       "ci_high_pct": 0.18,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.18,
+          0.18
+        ],
+        "referrer source = search": [
+          -0.18,
+          0.18
+        ],
+        "referrer source = social": [
+          -0.18,
+          0.18
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -1637,7 +2267,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -1667,7 +2311,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0006",
@@ -1693,7 +2363,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -1720,7 +2404,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -1750,7 +2448,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0007",
@@ -1776,7 +2500,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -1803,7 +2541,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -1833,7 +2585,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0008",
@@ -1859,7 +2637,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -1886,7 +2678,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -1916,7 +2722,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0009",
@@ -1942,7 +2774,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -1969,7 +2815,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "cart abandonment = True \u00d7 referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "cart abandonment = True \u00d7 referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -1999,7 +2859,33 @@
       "ci_low_pct": -0.21,
       "ci_high_pct": 0.21,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "device type = mobile \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = mobile \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = email": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = search": [
+          -0.21,
+          0.21
+        ],
+        "device type = tablet \u00d7 referrer source = social": [
+          -0.21,
+          0.21
+        ]
+      }
     },
     {
       "product_id": "GC-0010",
@@ -2025,7 +2911,21 @@
       "ci_low_pct": -0.17,
       "ci_high_pct": 0.17,
       "p_value_corrected": 1.0,
-      "significant_variants": []
+      "significant_variants": [],
+      "variant_ci": {
+        "referrer source = email": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = search": [
+          -0.17,
+          0.17
+        ],
+        "referrer source = social": [
+          -0.17,
+          0.17
+        ]
+      }
     }
   ],
   "diagnostics": [
@@ -2034,70 +2934,80 @@
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 89.99
     },
     {
       "product_id": "GC-0002",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 32.5
     },
     {
       "product_id": "GC-0003",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 54.99
     },
     {
       "product_id": "GC-0004",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 219.0
     },
     {
       "product_id": "GC-0005",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 79.99
     },
     {
       "product_id": "GC-0006",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 78.0
     },
     {
       "product_id": "GC-0007",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 299.0
     },
     {
       "product_id": "GC-0008",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 449.0
     },
     {
       "product_id": "GC-0009",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 18.0
     },
     {
       "product_id": "GC-0010",
       "n_observations": 192,
       "n_parameters": 19,
       "fitted": true,
-      "reason": null
+      "reason": null,
+      "control_price": 6800.0
     }
   ],
   "methodology_note": "Every pricing signal is placed in one of two buckets. Market-based signals (inventory, time of day, day of week, seasonal demand) describe conditions that apply equally to every shopper; variance driven by them is conventional dynamic pricing and is surfaced for visibility only. Individual-based signals (device, operating system, location, ISP, browsing and cart history, referrer, login state, account tenure) describe the shopper rather than the market; variance driven by them is personalized or 'surveillance' pricing, which regulators increasingly require merchants to disclose. The audit runs a randomized factorial experiment: every synthetic session is assigned a value for every signal at random, so each signal's effect can be estimated while holding all the others constant. For each product, log(price) is fit by robust (Huber) regression on all signals at once plus every pairwise interaction between individual-based signals. Each effect is reported as a percentage with a 95% confidence interval and a p-value corrected for multiple comparisons (Benjamini-Hochberg, false discovery rate 5%). A signal is flagged only if its effect is statistically significant after correction and at least 3% in size; smaller or non-significant effects are reported as clean."

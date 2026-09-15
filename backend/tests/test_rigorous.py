@@ -173,6 +173,14 @@ class TestGhostCartRecovery:
                 continue
             assert f.ci_low_pct <= f.variance_pct * (1 if f.direction == "markup" else -1) <= f.ci_high_pct
 
+    def test_every_level_has_a_confidence_interval(self, findings):
+        for f in findings.values():
+            assert set(f.variant_ci) == set(f.variant_breakdown)
+            for level, (lo, hi) in f.variant_ci.items():
+                assert lo <= f.variant_breakdown[level] <= hi, (f.term, level)
+            if f.driving_variant:
+                assert f.variant_ci[f.driving_variant] == (f.ci_low_pct, f.ci_high_pct)
+
     def test_ordering_and_hidden_clean(self):
         _, findings = run(ghostcart_sessions(), include_clean=False)
         assert all(f.severity is not RiskSeverity.NONE for f in findings)
@@ -246,6 +254,21 @@ def test_too_few_sessions_is_skipped_not_guessed():
     assert diag.fitted is False
     assert diag.n_parameters == 19
     assert "152" in diag.reason
+
+
+def test_control_price_is_the_observed_control_cell():
+    engine, _ = run(ghostcart_sessions({"GC-0001": 89.99, "GC-0010": 6800.0}))
+    by = {d.product_id: d for d in engine.diagnostics}
+    assert by["GC-0001"].control_price == 89.99
+    assert by["GC-0010"].control_price == 6800.0
+
+
+def test_control_price_falls_back_to_intercept_without_a_control_cell():
+    # Reference inventory 45 never appears in the grid, so no session is at
+    # every reference level; the intercept (centred on 45) stands in.
+    engine, _ = run(ghostcart_sessions({"GC-0001": 89.99}), reference={**GHOSTCART_REFERENCE, S.INVENTORY_LEVEL: 45})
+    cp = engine.diagnostics[0].control_price
+    assert cp == pytest.approx(89.99 * 1.01, rel=0.005)  # 45 units → +1% under the rule
 
 
 def test_min_obs_per_param_is_configurable():

@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, FrozenSet, List, Optional
+from typing import Dict, FrozenSet, List, Optional, Tuple
 
 
 class SignalType(Enum):
@@ -151,6 +151,8 @@ class AuditFinding:
     # in ``variant_breakdown`` but absent here were tested and not
     # statistically distinguishable from the reference level.
     significant_variants: List[str] = field(default_factory=list)
+    # 95% CI per level, in percent: {level: (low, high)}.
+    variant_ci: Dict[str, Tuple[float, float]] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         if not self.signals:
@@ -185,6 +187,7 @@ class AuditFinding:
             "ci_high_pct": self.ci_high_pct,
             "p_value_corrected": self.p_value_corrected,
             "significant_variants": list(self.significant_variants),
+            "variant_ci": {k: [lo, hi] for k, (lo, hi) in self.variant_ci.items()},
         }
 
 
