@@ -198,11 +198,16 @@ correction) is now backed by code and tests.
       not pushed): status "In Progress", repo link only — add `url` and a
       `/projects/priceintegrity.jpg` screenshot after deploy.
 - [x] **Phase 5 — Packaging.** LICENSE, `docs/methodology.md`, `git init`.
-- [ ] **Phase 6 — Publish.** Create github.com/Jthomas244/price-integrity
-      (the README/frontend already link there), push; deploy frontend to
-      Vercel (root dir `frontend/`) and backend to Render/Fly with
-      `GHOSTCART_PROBE_SECRET` + `CORS_ORIGINS`; set `NEXT_PUBLIC_API_URL`;
-      add a card to julianthomas.dev
+- [ ] **Phase 6 — Publish.** [x] github.com/Jthomas244/price-integrity
+      created and pushed 2026-09-15. [x] `backend/Dockerfile` +
+      `render.yaml` added (Docker daemon wasn't running, so the image is
+      untested locally — first Render build will tell). Remaining, all
+      Julian's (deploys are blocked for Claude Code): deploy backend
+      (Render blueprint; set `GHOSTCART_PROBE_SECRET`, fix `CORS_ORIGINS`
+      to the real frontend origin), deploy frontend (Vercel, root
+      `frontend`, `NEXT_PUBLIC_API_URL`), push GhostCart + set
+      `NEXT_PUBLIC_PRICEINTEGRITY_URL`, then finish the card on
+      julianthomas.dev
       (`AI Port 2/portfolio/src/data/projects.ts`, same pattern as the
       VaultAP and GhostCart cards).
 

@@ -1,0 +1,16 @@
+# Render blueprint for the audit API. Deploy: New + → Blueprint → this repo.
+# Set GHOSTCART_PROBE_SECRET in the dashboard (sync: false keeps it out of git).
+services:
+  - type: web
+    name: price-integrity-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: GHOSTCART_PROBE_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://price-integrity.vercel.app,http://localhost:3000
+      - key: GHOSTCART_BASE_URL
+        value: https://ghostcart-ten.vercel.app

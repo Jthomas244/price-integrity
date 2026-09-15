@@ -89,6 +89,16 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 
 Interactive docs at `http://localhost:8000/docs`.
 
+### Deploying
+
+- **Backend** — `backend/Dockerfile` (uvicorn on `$PORT`); `render.yaml` is a
+  Render blueprint for it. Set `GHOSTCART_PROBE_SECRET` and `CORS_ORIGINS`
+  (the frontend's origin).
+- **Frontend** — a Next.js app rooted at `frontend/`; on Vercel set the root
+  directory to `frontend` and `NEXT_PUBLIC_API_URL` to the backend's URL.
+  Without a backend the site still works — the report page shows the
+  committed audit and explains that live re-runs are off.
+
 ## Tests
 
 ```bash
