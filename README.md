@@ -113,7 +113,8 @@ Dependencies: fastapi, uvicorn, httpx, numpy, scipy (no statsmodels, no pandas).
 - [x] Phase 1 — Factorial HTTP prober + GhostCart client
 - [x] Phase 2 — Rigorous audit engine (Huber IRLS, BH-FDR, interactions, Monte Carlo check)
 - [x] Phase 3 — Report generator (interaction findings, CIs, corrected p-values)
-- [ ] First real audit run against live GhostCart (needs the probe secret)
-- [ ] Phase 4 — Next.js frontend; GhostCart's `/audit` page shows the real report
-- [ ] Phase 5 — Packaging (LICENSE, `docs/methodology.md`, `git init`)
-- [ ] Phase 6 — Publish
+- [x] First real audit of live GhostCart — `reports/ghostcart-latest.{json,html}`
+- [x] Phase 4 — Next.js frontend (`frontend/`): landing, report with live re-run and
+      interactive visualizations, methodology; GhostCart's `/audit` shows the real result
+- [x] Phase 5 — Packaging (MIT LICENSE, `docs/methodology.md`)
+- [ ] Phase 6 — Deploy (frontend on Vercel, API on Render)
