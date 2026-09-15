@@ -111,9 +111,16 @@ httpx, numpy, scipy; dev: pytest. No pandas, no statsmodels.
   individual term; ≤ 5 may produce a finding), power. `tests/test_factorial.py`
   (19) — `FakeGhostCart` httpx.MockTransport implementing the contract
   verbatim; full pipeline HTTP → report. `tests/test_api.py` (+5).
-- `.gitignore` (root), `.env.example`. **No `.env` yet** — the live run
-  hasn't happened. Not yet a git repo. No LICENSE, no
-  `docs/methodology.md`, no frontend.
+- `.gitignore` (root), `.env.example`, `LICENSE` (MIT),
+  `docs/methodology.md`. Git repo initialised (`main`, one commit), no
+  remote yet. **No `.env` yet** — the live run hasn't happened. No frontend.
+- **Secret retrieval dead end (2026-09-15):** `PERSONA_PRICING_SECRET`
+  was created as a *Sensitive* env var on Vercel, so `vercel env pull`
+  returns the placeholder `[SENSITIVE]`, not the value. Either Julian
+  has the original `openssl rand -hex 32` output, or the secret must be
+  rotated (`vercel env rm/add PERSONA_PRICING_SECRET production` in
+  `~/Downloads/ghostcart`, then redeploy) — rotation is a production
+  change; ask first.
 
 Spec files (in `~/Downloads`, not in the repo): `PriceIntegrity.md`,
 `PriceAudit.md`, `GHOSTCART_PHASE0_CLAUDE.md`, and the recovered
@@ -159,8 +166,7 @@ correction) is now backed by code and tests.
       page should embed or link the real report. Note `/audit/ghostcart`
       takes ~30–60 s; the frontend needs a progress state or should
       serve the cached `reports/ghostcart-latest.json`.
-- [ ] **Phase 5 — Packaging.** LICENSE (MIT), `docs/methodology.md`
-      (the README's claims table is the outline), `git init`.
+- [x] **Phase 5 — Packaging.** LICENSE, `docs/methodology.md`, `git init`.
 - [ ] **Phase 6 — Publish.** Push repo; add a card to julianthomas.dev
       (`AI Port 2/portfolio/src/data/projects.ts`, same pattern as the
       VaultAP and GhostCart cards).
