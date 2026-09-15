@@ -114,7 +114,22 @@ httpx, numpy, scipy; dev: pytest. No pandas, no statsmodels.
 - `.gitignore` (root), `.env.example`, `LICENSE` (MIT),
   `docs/methodology.md`. Git repo initialised (`main`), no remote yet.
   `.env` holds the (rotated) probe secret. `reports/ghostcart-latest.{json,html}`
-  is the first real audit (committed; timestamped copies are ignored). No frontend.
+  is the first real audit (committed; timestamped copies are ignored).
+
+`frontend/` — Next 14.2.5 + Tailwind 3 + lucide-react (GhostCart's stack),
+`npm run dev` / `npm run build` (both run `scripts/sync-data.mjs` first,
+which copies `reports/ghostcart-latest.json` and `docs/methodology.md`
+into `src/data/`; the copies are committed so a Vercel build rooted at
+`frontend/` works). Routes: `/` landing (numbers come from the committed
+report via `distinctTerms`), `/report` (`ReportClient` shows the committed
+report and can POST `/audit/ghostcart` on the backend for a live re-run —
+verified working in the browser, 12 s), `/methodology` (react-markdown of
+the doc). Findings are grouped per term (`TermGroup`) with a per-product
+table. Env: `NEXT_PUBLIC_API_URL` (default localhost:8000),
+`NEXT_PUBLIC_GHOSTCART_URL`, `NEXT_PUBLIC_REPO_URL` (`frontend/.env.example`).
+Backend needs `CORS_ORIGINS` set to the frontend origin. Dev servers:
+`AI Port 1/.claude/launch.json` (`pi-frontend`; `pi-backend` config exists
+but the sandbox refuses to exec the venv binary — start uvicorn from Bash).
 - **Secret (rotated 2026-09-15):** `PERSONA_PRICING_SECRET` is a Vercel
   *Sensitive* var, so `vercel env pull` returns `[SENSITIVE]`. The value
   was rotated; the new one is in `price-integrity/.env` and on Vercel
@@ -162,13 +177,16 @@ correction) is now backed by code and tests.
       interaction, inventory lawful (+10.3% at stock 1 / −9.5% at 100),
       referrer and both referrer interactions clean. CIs ±0.18pp,
       q = 0. Re-run: `backend/.venv/bin/python scripts/audit_ghostcart.py`.
-- [ ] **Phase 4 — Frontend.** Next.js landing + "run the audit" demo
-      against live GhostCart; cross-link both ways. GhostCart's `/audit`
-      page should embed or link the real report. Note `/audit/ghostcart`
-      takes ~30–60 s; the frontend needs a progress state or should
-      serve the cached `reports/ghostcart-latest.json`.
+- [x] **Phase 4 — Frontend (PriceIntegrity side).** Built and committed
+      2026-09-15. Still to do on the **GhostCart side**: point
+      `NEXT_PUBLIC_PRICEINTEGRITY_URL` at the deployed frontend and make
+      `/audit` show/link the real report instead of its derived preview.
 - [x] **Phase 5 — Packaging.** LICENSE, `docs/methodology.md`, `git init`.
-- [ ] **Phase 6 — Publish.** Push repo; add a card to julianthomas.dev
+- [ ] **Phase 6 — Publish.** Create github.com/Jthomas244/price-integrity
+      (the README/frontend already link there), push; deploy frontend to
+      Vercel (root dir `frontend/`) and backend to Render/Fly with
+      `GHOSTCART_PROBE_SECRET` + `CORS_ORIGINS`; set `NEXT_PUBLIC_API_URL`;
+      add a card to julianthomas.dev
       (`AI Port 2/portfolio/src/data/projects.ts`, same pattern as the
       VaultAP and GhostCart cards).
 
