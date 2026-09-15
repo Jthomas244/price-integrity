@@ -112,15 +112,17 @@ httpx, numpy, scipy; dev: pytest. No pandas, no statsmodels.
   (19) — `FakeGhostCart` httpx.MockTransport implementing the contract
   verbatim; full pipeline HTTP → report. `tests/test_api.py` (+5).
 - `.gitignore` (root), `.env.example`, `LICENSE` (MIT),
-  `docs/methodology.md`. Git repo initialised (`main`, one commit), no
-  remote yet. **No `.env` yet** — the live run hasn't happened. No frontend.
-- **Secret retrieval dead end (2026-09-15):** `PERSONA_PRICING_SECRET`
-  was created as a *Sensitive* env var on Vercel, so `vercel env pull`
-  returns the placeholder `[SENSITIVE]`, not the value. Either Julian
-  has the original `openssl rand -hex 32` output, or the secret must be
-  rotated (`vercel env rm/add PERSONA_PRICING_SECRET production` in
-  `~/Downloads/ghostcart`, then redeploy) — rotation is a production
-  change; ask first.
+  `docs/methodology.md`. Git repo initialised (`main`), no remote yet.
+  `.env` holds the (rotated) probe secret. `reports/ghostcart-latest.{json,html}`
+  is the first real audit (committed; timestamped copies are ignored). No frontend.
+- **Secret (rotated 2026-09-15):** `PERSONA_PRICING_SECRET` is a Vercel
+  *Sensitive* var, so `vercel env pull` returns `[SENSITIVE]`. The value
+  was rotated; the new one is in `price-integrity/.env` and on Vercel
+  production (deployment `bj66t8rdd`). If it's ever lost, rotate again:
+  Claude Code can `vercel env rm` but the harness blocks `vercel env add`
+  and `vercel redeploy` — Julian runs those two in his terminal
+  (`redeploy` takes no `--yes`; "Error: fetch failed" after the URL is
+  printed is just polling — check `vercel ls --prod`).
 
 Spec files (in `~/Downloads`, not in the repo): `PriceIntegrity.md`,
 `PriceAudit.md`, `GHOSTCART_PHASE0_CLAUDE.md`, and the recovered
@@ -153,14 +155,13 @@ correction) is now backed by code and tests.
 - [x] **Phase 1 — Probing engine.** Factorial HTTP prober + GhostCart client.
 - [x] **Phase 2 — Rigorous audit engine.** Ported + tested.
 - [x] **Phase 3 — Report generator.** Interactions, CIs, corrected p.
-- [ ] **First live run.** Needs `GHOSTCART_PROBE_SECRET` in `.env`
-      (`vercel env pull` in `~/Downloads/ghostcart`). Then
-      `backend/.venv/bin/python scripts/audit_ghostcart.py`. Expected:
-      10 products × 192 sessions ≈ 1,920 requests; every product should
-      show mobile +10% (MODERATE), abandonment +6% (LOW), mobile ×
-      abandonment +8% (MODERATE, interaction), inventory lawful,
-      referrer clean. Anything else is a real discrepancy between
-      GhostCart and its contract — investigate, don't tune.
+- [x] **First live run (2026-09-15).** 10 products × 192 sessions,
+      1,920 requests, 0 failures, 13 s at concurrency 8. Result matched
+      the contract on every product: mobile +10.00% MODERATE,
+      abandonment +6.00% LOW, mobile × abandonment +8.00% MODERATE
+      interaction, inventory lawful (+10.3% at stock 1 / −9.5% at 100),
+      referrer and both referrer interactions clean. CIs ±0.18pp,
+      q = 0. Re-run: `backend/.venv/bin/python scripts/audit_ghostcart.py`.
 - [ ] **Phase 4 — Frontend.** Next.js landing + "run the audit" demo
       against live GhostCart; cross-link both ways. GhostCart's `/audit`
       page should embed or link the real report. Note `/audit/ghostcart`
