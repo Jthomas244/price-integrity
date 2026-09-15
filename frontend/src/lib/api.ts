@@ -1,6 +1,9 @@
 import type { Report } from "./report";
 
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
+/** Set at build time. Unset means this deployment has no audit backend — the
+ * report page then serves the committed audit and says live re-runs are off. */
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "").replace(/\/$/, "");
+export const API_CONFIGURED = API_URL.length > 0;
 export const GHOSTCART_URL = process.env.NEXT_PUBLIC_GHOSTCART_URL ?? "https://ghostcart-ten.vercel.app";
 export const REPO_URL = process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/Jthomas244/price-integrity";
 
@@ -22,7 +25,7 @@ export async function runLiveAudit(signal?: AbortSignal): Promise<Report> {
     });
   } catch (e) {
     if ((e as Error).name === "AbortError") throw e;
-    throw new ApiError(`Could not reach the audit API at ${API_URL}.`);
+    throw new ApiError("Could not reach the audit API.");
   }
   if (!res.ok) {
     let detail = `${res.status} ${res.statusText}`;
@@ -36,6 +39,7 @@ export async function runLiveAudit(signal?: AbortSignal): Promise<Report> {
 }
 
 export async function apiConfigured(): Promise<boolean> {
+  if (!API_CONFIGURED) return false;
   try {
     const res = await fetch(`${API_URL}/ghostcart`, { cache: "no-store" });
     if (!res.ok) return false;

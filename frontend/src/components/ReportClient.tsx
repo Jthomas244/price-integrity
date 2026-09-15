@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Play, Loader2, RotateCcw, AlertTriangle } from "lucide-react";
 import ReportView from "./ReportView";
-import { ApiError, apiConfigured, runLiveAudit, API_URL } from "@/lib/api";
+import { ApiError, apiConfigured, runLiveAudit, API_CONFIGURED } from "@/lib/api";
 import type { Report } from "@/lib/report";
 
 type Status = "idle" | "running" | "done" | "error";
@@ -63,8 +63,10 @@ export default function ReportClient({ initial }: { initial: Report }) {
           <p className="text-sm text-muted mt-0.5">
             {status === "running"
               ? `Probing ${sessions.toLocaleString()} synthetic sessions across ${report.summary.products_tested.length} products… ${elapsed.toFixed(0)} s`
-              : available === false
-                ? `Live re-runs need the audit API (${API_URL}) with a GhostCart probe secret. The report below was produced by exactly that pipeline and is committed with the repo.`
+              : !API_CONFIGURED
+                ? "Live re-runs aren't enabled on this deployment yet — the audit API isn't connected. The report below was produced by exactly that pipeline against live GhostCart and is committed with the repo; re-run it yourself with scripts/audit_ghostcart.py."
+                : available === false
+                ? "The audit API is connected but not ready (no GhostCart probe secret, or it's asleep). The report below is the committed run of the same pipeline."
                 : "Re-run the whole pipeline against live GhostCart: a 192-cell factorial design per product, robust regression, FDR correction. Deterministic endpoint, so expect the same numbers."}
           </p>
           {status === "error" && error && (
